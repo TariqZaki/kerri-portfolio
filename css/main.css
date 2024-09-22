@@ -1,0 +1,655 @@
+/*!<--- global style ---->*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --main-color: #e65f78;
+  --bg-color: #f1f1f1;
+  --main-font: "Montserrat", sans-serif;
+  --second-font: "Nunito Sans", sans-serif;
+}
+
+.my-color {
+  color: var(--main-color);
+}
+
+.my-bg {
+  background-color: var(--bg-color);
+}
+
+.second-bg {
+  background-color: var(--main-color);
+}
+
+.second-color {
+  color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --main-font: "Montserrat", sans-serif;
+}
+
+p {
+  --second-font: "Nunito Sans", sans-serif;
+}
+/*!<--- global style ---->*/
+
+/*?<--- loading & spinner ---->*/
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: #333;
+  z-index: 9999;
+}
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #ff3d00;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+/*?<--- loading & spinner ---->*/
+
+/*?<--- nav-bar style ---->*/
+nav {
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+nav .container .nav-item .nav-link.active {
+  color: brown;
+}
+
+nav .container ul li a {
+  color: #fff;
+  transition: color 0.5 ease-in-out;
+}
+
+nav .container ul li a:hover {
+  color: #e65f78;
+  background-color: #FFF;
+  border-radius: 10%;
+}
+/*?<--- nav-bar style ---->*/
+
+/*?<--- home section style ---->*/
+#home {
+  background: linear-gradient(#000000b3, #000000b3),
+    url(../images/header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+#home h1 {
+  font-size: 64px;
+}
+
+#home h1::after {
+  content: "";
+  animation: typing 5s linear infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: "Kerri Deo.|";
+  }
+
+  1.5% {
+    content: "Kerri De.|";
+  }
+
+  3% {
+    content: "Kerri D.|";
+  }
+
+  4.5% {
+    content: "Kerri.|";
+  }
+
+  6% {
+    content: "Kerr.|";
+  }
+
+  7.5% {
+    content: "Ker.|";
+  }
+
+  9% {
+    content: "Ke|";
+  }
+
+  10.5% {
+    content: "K|";
+  }
+
+  12% {
+    content: "";
+  }
+
+  13.5% {
+    content: "K.|";
+  }
+
+  15% {
+    content: "Ke.|";
+  }
+
+  16.5% {
+    content: "Ker.|";
+  }
+
+  18% {
+    content: "Kerr.|";
+  }
+
+  19.5% {
+    content: "Kerri.|";
+  }
+
+  21% {
+    content: "Kerri D.|";
+  }
+
+  22.5% {
+    content: "Kerri De.|";
+  }
+
+  25% {
+    content: "Kerri Deo.|";
+  }
+
+  26.5% {
+    content: "";
+  }
+
+  28% {
+    content: "Designer.|";
+  }
+
+  29.5% {
+    content: "Designe.|";
+  }
+
+  31% {
+    content: "Design.|";
+  }
+
+  32.5% {
+    content: "Desig.|";
+  }
+
+  34% {
+    content: "Desi.|";
+  }
+
+  35.5% {
+    content: "Des.|";
+  }
+
+  37% {
+    content: "De.|";
+  }
+
+  38.5% {
+    content: "D.|";
+  }
+
+  40% {
+    content: "|";
+  }
+
+  42% {
+    content: "D.|";
+  }
+
+  44% {
+    content: "De.|";
+  }
+
+  44% {
+    content: "Des.|";
+  }
+
+  46% {
+    content: "Desi.|";
+  }
+
+  48% {
+    content: "Desi.|";
+  }
+
+  50% {
+    content: "Desig.|";
+  }
+
+  52% {
+    content: "Design.|";
+  }
+
+  54% {
+    content: "Designe.|";
+  }
+
+  56% {
+    content: "Designer.|";
+  }
+
+  58% {
+    content: "";
+  }
+
+  60% {
+    content: "Developer.|";
+  }
+
+  63% {
+    content: "Develope.|";
+  }
+
+  66% {
+    content: "Develop.|";
+  }
+
+  69% {
+    content: "Develo.|";
+  }
+
+  72% {
+    content: "Devel.|";
+  }
+
+  75% {
+    content: "Deve.|";
+  }
+
+  79% {
+    content: "Dev.|";
+  }
+
+  81% {
+    content: "De.|";
+  }
+
+  84% {
+    content: "D.|";
+  }
+
+  86% {
+    content: ".|";
+  }
+
+  88% {
+    content: "D.|";
+  }
+
+  90% {
+    content: "De.|";
+  }
+
+  91% {
+    content: "Dev.|";
+  }
+
+  93% {
+    content: "Deve.|";
+  }
+
+  95% {
+    content: "Devel.|";
+  }
+
+  96% {
+    content: "Develo.|";
+  }
+
+  97% {
+    content: "Develop.|";
+  }
+
+  98% {
+    content: "Develope.|";
+  }
+
+  99% {
+    content: "Developer.|";
+  }
+
+  100% {
+    content: "";
+  }
+}
+
+#home .btn-download {
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 15px 50px;
+}
+
+#home .btn-download:hover
+{
+  background-color: #e65f78;
+  border: 1px solid #e65f78;
+}
+
+#home .bounce {
+  height: 80px;
+  width: 40px;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#home .bounce::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 5px;
+  height: 10px;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*?<--- home section style ---->*/
+
+/*?<--- setting shape style ---->*/
+.setting {
+  width: 60px;
+  height: 50px;
+  background-color: #333333;
+  position: fixed;
+  top: 30%;
+  left: 0;
+}
+/*?<--- setting shape style ---->*/
+
+/*?<--- about section style ---->*/
+#about h3 {
+  color: var(--main-color);
+}
+
+#about h3 span {
+  color: #000;
+}
+
+#about .icons-group .icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid rgb(218, 218, 218);
+  border-radius: 50%;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#about .icons-group .icon:hover {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+/*?<--- about section style ---->*/
+
+/*?<--- client section style ---->*/
+#client figure p {
+  font-size: 18px;
+  font-weight: 27px;
+}
+
+#client
+  .carousel-indicators
+  [data-bs-target="#carouselExampleCaptions"].active {
+  width: 50px;
+  height: 5px;
+  background-color: var(--main-color);
+}
+
+#client .carousel-indicators [data-bs-target="#carouselExampleCaptions"] {
+  width: 20px;
+  height: 5px;
+  background-color: var(--main-color);
+}
+/*?<--- client section style ---->*/
+
+/*?<--- portfolio section style ---->*/
+#portfolio ul .nav-link.active {
+  background-color: var(--main-color);
+}
+
+#portfolio .container .row .contain {
+  position: relative;
+}
+
+#portfolio .container .row .contain:hover .layer {
+  opacity: 1;
+}
+
+#portfolio .container .row .contain img {
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio .container .row .contain:hover img {
+  transform: scale(1.4);
+}
+
+#portfolio .container .row .layer {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333333bc;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio .container .row .contain:hover .text {
+  transform: translateY(0);
+}
+
+#portfolio .container .row .layer .text {
+  position: absolute;
+  transform: translateY(300%);
+  transition: all 0.3s ease-in-out;
+}
+/*?<--- portfolio section style ---->*/
+
+/*?<--- blog section style ---->*/
+#blog .card-body span {
+  color: var(--main-color);
+}
+/*?<--- blog section style ---->*/
+
+/*?<--- contact section style ---->*/
+#contact button {
+  width: 200px;
+  height: 60px;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+#contact input {
+  outline: none;
+  border: 1px solid rgb(183, 183, 183);
+}
+
+#contact input:focus {
+  border: 3px solid var(--main-color);
+}
+
+#contact textarea {
+  outline: none;
+  border: 1px solid rgb(183, 183, 183);
+}
+
+#contact textarea:focus {
+  border: 3px solid var(--main-color);
+}
+
+#content .content i {
+  transition: all 0.3s ease-in-out;
+}
+
+#contact .content:hover i {
+  color: #333333;
+}
+
+#content .content h5 {
+  transition: all 0.3s ease-in-out;
+}
+
+#contact .content:hover h5 {
+  color: var(--main-color);
+}
+/*?<--- contact section style ---->*/
+
+/*?<--- back to top icon style ---->*/
+.backToTop {
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 20px;
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: #fff;
+  display: none;
+}
+/*?<--- back to top icon style ---->*/
+
+/*!<--- media query ---->*/
+@media (max-width: 992px) {
+  nav #navbarSupportedContent ul li .active::after {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    background-color: var(--hover-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  #team .container .row .layer-content {
+    background-color: rgba(255, 255, 255, 0.836);
+    width: 97%;
+    height: 97%;
+    left: 5px;
+    top: 5px;
+  }
+
+  #blog .container .row .box {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #services {
+    width: 95%;
+  }
+
+  #portfolio {
+    width: 95%;
+  }
+
+  #team .container .row .layer-content {
+    background-color: rgba(255, 255, 255, 0.836);
+    width: 98%;
+    height: 98%;
+    left: 5px;
+    top: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #blog .container .row .box {
+    margin-bottom: 20px;
+  }
+}
+/*!<--- media query ---->*/
